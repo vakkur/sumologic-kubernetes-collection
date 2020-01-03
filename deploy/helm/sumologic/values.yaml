@@ -51,7 +51,7 @@ sumologic:
   #collectorName: ""
 
   # Cluster name
-  clusterName: "kubernetes"
+  clusterName: "im-stage"
 
   setup:
     clusterRole:
@@ -360,7 +360,7 @@ prometheus-operator:
     prometheusSpec:
       externalLabels:
         # Set this to a value to distinguish between different k8s clusters
-        cluster: kubernetes
+        cluster: im-stage
       remoteWrite:
         # kube state metrics
         - url: http://collection-sumologic.sumologic.svc.cluster.local:9888/prometheus.metrics.state
